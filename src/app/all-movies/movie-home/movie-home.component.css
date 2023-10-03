@@ -1,0 +1,17 @@
+.pointer{
+    cursor: pointer;
+    font-size: 25px;
+}
+.search {
+    background-color: #f3f1f1;
+}
+.btn {
+    background-color: #ffe353;
+    border: none;
+    color: black;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+.page-link{
+    cursor: pointer;
+}

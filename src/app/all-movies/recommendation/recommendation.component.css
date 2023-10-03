@@ -1,0 +1,21 @@
+.pointer{
+    cursor: pointer;
+    font-size: 25px;
+}
+.card-progress
+{
+    position: absolute;
+    top:90%;
+    left: 5%;
+}
+.details-type p{
+    padding: 8px 20px;
+    background-color: #ffe353; 
+    border-radius: 30px;
+}
+@media only screen and (max-width: 768px) {
+    .card-progress{
+        top: 100%;
+        left: 0;
+    }
+}

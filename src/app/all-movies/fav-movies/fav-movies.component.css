@@ -1,0 +1,30 @@
+.pointer{
+    cursor: pointer;
+    font-size: 25px;
+}
+.icon{
+    font-size: 17rem;
+    color: rgb(179, 179, 179);
+}
+.btn{
+    background-color: rgb(216, 216, 48);
+}
+.fav-data{
+    box-sizing: border-box;
+}
+.rounded{
+    border-radius: 20px !important;
+}
+.date{
+    font-size: 0.7rem !important;
+}
+p{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+.page-content{
+  min-height: calc(100vh - 80px) !important;
+  margin: 0;
+  min-height: calc(100vh - 80px);
+  padding-bottom: 80px;
+}

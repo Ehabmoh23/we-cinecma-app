@@ -1,0 +1,36 @@
+<section class="home my-5">
+    <div class="container mb-5">
+        <div class="search py-3 border rounded-3">
+            <div class="container m-2">
+                <div class="my-2">
+                    <h2 class="m-3">Welcome To Our Movie App</h2>
+                    <p class="m-3">Millions of movies , Tv shows , people to dicover , Explore now</p>
+                </div>
+                <form class="w-100 d-flex">
+                    <input [(ngModel)]="searchVal" type="text" name="search" class="form-control m-3"
+                        placeholder="search">
+                    <button type="submit" class="btn btn-primary m-3" (click)="searchMovie()">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="" *ngIf="!allMovies">
+        <h1 class="text-center">Loading....</h1>
+    </div>
+    <div class="container" *ngIf="allMovies">
+        <h2 class="my-2">Popular Movies</h2>
+        <app-movie-card [allMovies]="allMovies"></app-movie-card>
+    </div>
+    <div *ngIf="allMovies" class="d-flex justify-content-center pb-5 mt-3">
+        <ngb-pagination
+        [(page)]="currentPage"
+        [maxSize]="5"
+        [collectionSize]="5000"
+        (pageChange)="getMoviesPagination(currentPage)"
+        [boundaryLinks]="true"
+        [rotate]="true" 
+      ></ngb-pagination>
+    </div>
+   
+</section>

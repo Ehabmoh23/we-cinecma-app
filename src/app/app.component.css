@@ -1,0 +1,24 @@
+.pointer{
+    cursor: pointer;
+}
+.card-progress
+{
+    position: absolute;
+    top:90%;
+    left: 5%;
+}
+.active>.page-link{
+    background-color: #ffe353 !important;
+    border-color: #ffe353 !important;
+    color: black !important;
+}
+.page-link{
+color: black !important;
+border: none !important;
+}
+@media only screen and (min-width: 768px) {
+    .card-progress{
+        top: 100%;
+        left: 0;
+    }
+}

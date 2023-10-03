@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-2" *ngFor="let movie of allMovies.results ;">
+        <div class="movie-cart my-3 " *ngIf="movie">
+            <div class="position-relative">
+                <img [src]="(movie.poster_path == null) ? ('../../../assets/img.jpg') : (imagePass + movie.poster_path)" class=" card-img-top w-100 pointer"
+                    (click)="redirectToDetails(movie.id)" alt="...">
+                <circle-progress [percent]="(movie.vote_average/10)*100" class="card-progress"
+                    [showTitle]="true" [backgroundPadding]="2" [unitsFontSize]="'10'" [radius]="15"
+                    [titleFontSize]="'10'" [titleFontWeight]="'50'" [outerStrokeWidth]="4" [innerStrokeWidth]="0"
+                    [innerStrokeColor]="'#000'" [titleColor]="'#ffffff'" subtitle="" [unitsColor]="'#ffffff'"
+                    [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true"
+                    [animationDuration]="300">
+                </circle-progress>
+            </div>
+
+            <div class="card-body d-flex justify-content-between m-2">
+                <div class="mt-2">
+                    <h6 class="card-title">{{movie.title}}</h6>
+                    <p class="card-text">{{movie.release_date}}</p>
+                </div>
+                <div class="icon mt-3 pointer" [ngStyle]="{'color':isMovieInWatchList(movie)? '#ffe353':'black'}"
+                    (click)="addToWatchList(movie)">
+                    <fa-icon class="pointer" [icon]="faHeart"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
